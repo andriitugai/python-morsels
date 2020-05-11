@@ -29,7 +29,8 @@ class MyLinkedList(object):
 
     def addAtHead(self, val):
         """
-        Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+        Add a node of value val before the first element of the linked list. After the insertion,
+        the new node will be the first node of the linked list.
         :type val: int
         :rtype: None
         """
