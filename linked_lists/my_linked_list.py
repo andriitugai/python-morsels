@@ -1,10 +1,10 @@
 class MyLinkedList(object):
 
-    def __init__(self):
+    def __init__(self, val=None):
         """
         Initialize your data structure here.
         """
-        self.val = None
+        self.val = val
         self.next = None
 
     def get(self, index):
@@ -34,8 +34,7 @@ class MyLinkedList(object):
         :type val: int
         :rtype: None
         """
-        new_node = MyLinkedList()
-        new_node.val = val
+        new_node = MyLinkedList(val)
         new_node.next = self
         self = new_node
 
