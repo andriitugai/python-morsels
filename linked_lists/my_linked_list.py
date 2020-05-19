@@ -4,13 +4,51 @@ class Node(object):
         self.next = None
 
 
-class MyLinkedList(object):
+class LinkedList(object):
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
         self.head = None
+
+    @staticmethod
+    def build_from_iterbl(iterbl):
+        ll = LinkedList()
+        for item in iterbl:
+            ll.addAtTail(item)
+
+        return ll
+
+    @staticmethod
+    def reverse_iterative(llist):
+        prev = None
+        curr = llist.head
+        nxt = None
+
+        while curr is not None:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+
+        llist.head = prev
+        return llist
+
+
+    @staticmethod
+    def reverse_recursive(llist):
+        def reverse(head):
+            if not head or not head.next:
+                return head
+            new_head = reverse(head.next)
+            head.next.next = head
+            head.next = None
+
+            return new_head
+
+        llist.head = reverse(llist.head)
+        return llist
 
     def get(self, index):
         """
@@ -265,7 +303,7 @@ class Solution(object):
 
 
 def main():
-    a = MyLinkedList()
+    a = LinkedList()
 
     # a.addAtHead(2)
     # a.deleteAtIndex(1)
