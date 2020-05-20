@@ -24,7 +24,6 @@ class LinkedList(object):
     def reverse_iterative(llist):
         prev = None
         curr = llist.head
-        nxt = None
 
         while curr is not None:
             nxt = curr.next
@@ -305,7 +304,7 @@ class Solution(object):
 def main():
     a = LinkedList()
 
-    # a.addAtHead(2)
+    a.addAtHead(2)
     # a.deleteAtIndex(1)
     # a.addAtHead(2)
     # a.addAtHead(7)
