@@ -80,10 +80,3 @@ class Solution(object):
                 s_cnt[c_in] = 1
 
         return result
-
-
-
-
-
-
-
